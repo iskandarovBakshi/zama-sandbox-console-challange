@@ -1,0 +1,80 @@
+.display {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px;
+    border: 1px solid var(--mui-palette-grey-200);
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.2s ease-in-out;
+}
+
+.display:hover {
+    border-color: var(--mui-palette-grey-300);
+}
+
+.key {
+    flex: 1;
+    color: var(--mui-palette-text-primary);
+    word-break: break-all;
+    user-select: all;
+    min-width: 0;
+}
+
+.copyButton {
+    min-width: unset;
+    padding: 6px;
+    border-radius: 6px;
+}
+
+.copyButton svg {
+    font-size: 18px;
+}
+
+.copied {
+    background-color: var(--mui-palette-success-main);
+    color: var(--mui-palette-success-contrastText);
+}
+
+.copied:hover {
+    background-color: var(--mui-palette-success-dark);
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 4px 8px;
+    border-radius: 12px;
+    margin-left: 8px;
+    flex-shrink: 0;
+}
+
+.statusDot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.warning {
+    color: var(--mui-palette-warning-main);
+    background-color: var(--mui-palette-warning-light);
+}
+
+@media (max-width: 600px) {
+    .display {
+        gap: 12px;
+    }
+
+    .key {
+        text-align: center;
+    }
+
+    .status {
+        align-self: center;
+        margin-left: 0;
+    }
+}

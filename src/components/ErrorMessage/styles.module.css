@@ -1,0 +1,16 @@
+.errorMessageContainer {
+    align-items: center;
+    font-weight: bold;
+}
+
+.errorMessage {
+    background-color: black;
+    color: #fff;
+    display: block;
+    overflow-x: auto;
+    max-width: 150px;
+    padding: 2px;
+    font-size: 12px;
+    margin: 0;
+    white-space: nowrap;
+}

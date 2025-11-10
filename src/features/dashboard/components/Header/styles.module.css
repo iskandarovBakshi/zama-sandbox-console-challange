@@ -1,0 +1,59 @@
+.heroLink {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--mui-palette-text-primary);
+    font-weight: 600;
+}
+
+.toolbar {
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.stackRoot {
+    flex: 1;
+}
+
+.userProfile {
+    margin-left: auto;
+}
+
+@media (max-width: 990px) {
+    .toolbarPlaceholder {
+        height: 76px;
+    }
+
+    .container {
+        align-items: flex-start;
+    }
+
+    .stackRoot {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: var(--mui-spacing);
+        overflow-x: auto;
+
+        .heroLink {
+            order: 1;
+        }
+
+        .userProfile {
+            order: 2;
+        }
+
+        .dashboardLinks {
+            overflow-x: auto;
+            order: 3;
+            width: 100%;
+            > a {
+                white-space: nowrap;
+                flex-shrink: 0;
+            }
+        }
+    }
+}

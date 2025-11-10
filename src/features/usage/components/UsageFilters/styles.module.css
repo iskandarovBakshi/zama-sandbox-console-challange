@@ -1,0 +1,41 @@
+.container {
+    margin-bottom: 24px;
+}
+
+.filtersContainer {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.formControl {
+    min-width: 200px;
+    flex: 1;
+}
+
+.createTokenLinkItem {
+    padding: 0;
+}
+
+.createTokenLink {
+    display: block;
+    padding: 6px 16px;
+    width: 100%;
+}
+
+.selectTokenName {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 768px) {
+    .filtersContainer {
+        flex-direction: column;
+    }
+
+    .formControl {
+        min-width: 100%;
+    }
+}

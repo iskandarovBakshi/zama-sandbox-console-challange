@@ -1,0 +1,55 @@
+.chartCard {
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.chartCard:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cardContent {
+    padding: 24px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.chartTitle {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: var(--mui-palette-text-primary);
+}
+
+.customTooltip {
+    padding: 12px;
+    background-color: var(--mui-palette-grey-900);
+    border: 1px solid var(--mui-palette-grey-700);
+    border-radius: 4px;
+    color: var(--mui-palette-common-white);
+    font-size: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tooltipTitle {
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: var(--mui-palette-common-white);
+}
+
+.tooltipContent {
+    color: var(--mui-palette-grey-100);
+}
+
+@media (max-width: 768px) {
+    .cardContent {
+        padding: 16px;
+    }
+
+    .chartTitle {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+}

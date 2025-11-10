@@ -1,0 +1,87 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+input {
+    box-sizing: content-box;
+}
+
+/* Global styles and theme integration */
+:root {
+    --font-mono: var(--font-geist-mono);
+
+    /* Material-UI CSS Variables - Light Theme */
+    --mui-palette-primary-main: #1976d2;
+    --mui-palette-primary-light: #42a5f5;
+    --mui-palette-primary-dark: #1565c0;
+    --mui-palette-primary-contrastText: #fff;
+
+    --mui-palette-secondary-main: #dc004e;
+    --mui-palette-secondary-light: #ff5983;
+    --mui-palette-secondary-dark: #9a0036;
+    --mui-palette-secondary-contrastText: #fff;
+
+    --mui-palette-background-default: #fff;
+    --mui-palette-background-paper: #fff;
+    --mui-palette-background-level1: #f5f5f5;
+    --mui-palette-background-level2: #eeeeee;
+
+    --mui-palette-text-primary: rgba(0, 0, 0, 0.87);
+    --mui-palette-text-secondary: rgba(0, 0, 0, 0.6);
+    --mui-palette-text-disabled: rgba(0, 0, 0, 0.38);
+
+    --mui-palette-divider: rgba(0, 0, 0, 0.12);
+    --mui-palette-border: rgba(0, 0, 0, 0.12);
+
+    --mui-palette-error-main: #d32f2f;
+    --mui-palette-warning-main: #ed6c02;
+    --mui-palette-info-main: #0288d1;
+    --mui-palette-success-main: #2e7d32;
+
+    /* Custom spacing and layout */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-xxl: 48px;
+
+    /* Custom shadows */
+    --shadow-light: 0 1px 3px rgba(0, 0, 0, 0.12);
+    --shadow-medium: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-heavy: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Dark theme color scheme */
+[data-mui-color-scheme="dark"] {
+    --mui-palette-primary-main: #90caf9;
+    --mui-palette-primary-light: #e3f2fd;
+    --mui-palette-primary-dark: #42a5f5;
+    --mui-palette-primary-contrastText: #000;
+
+    --mui-palette-secondary-main: #f48fb1;
+    --mui-palette-secondary-light: #fce4ec;
+    --mui-palette-secondary-dark: #ad1457;
+    --mui-palette-secondary-contrastText: #000;
+
+    --mui-palette-background-default: #121212;
+    --mui-palette-background-paper: #1e1e1e;
+    --mui-palette-background-level1: #2d2d2d;
+    --mui-palette-background-level2: #3d3d3d;
+
+    --mui-palette-text-primary: #fff;
+    --mui-palette-text-secondary: rgba(255, 255, 255, 0.7);
+    --mui-palette-text-disabled: rgba(255, 255, 255, 0.5);
+
+    --mui-palette-divider: rgba(255, 255, 255, 0.12);
+    --mui-palette-border: rgba(255, 255, 255, 0.12);
+
+    --mui-palette-success-contrastText: #fff;
+}
+
+/* Global utility classes */
+code {
+    font-family: var(--font-mono);
+}

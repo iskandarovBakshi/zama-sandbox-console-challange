@@ -1,0 +1,6 @@
+.button {
+    color: var(--mui-palette-text-primary);
+    &.active {
+        background-color: var(--mui-palette-action-selected);
+    }
+}

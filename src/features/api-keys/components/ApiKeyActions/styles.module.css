@@ -1,0 +1,65 @@
+.actionButton {
+    min-width: unset;
+    padding: 6px;
+    border-radius: 6px;
+}
+
+.actionButton svg {
+    font-size: 18px;
+}
+
+.dropdownMenu {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    padding: 4px;
+}
+
+.menuItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+    min-width: 140px;
+}
+
+.menuItem:hover {
+    background-color: var(--mui-palette-action-hover);
+}
+
+.menuItem.regenerate {
+    color: var(--mui-palette-primary-main);
+}
+
+.menuItem.revoke {
+    color: var(--mui-palette-warning-main);
+}
+
+.menuItem.delete {
+    color: var(--mui-palette-error-main);
+}
+
+.menuItem svg {
+    font-size: 18px;
+}
+
+.menuItemText {
+    flex: 1;
+}
+
+@media (max-width: 600px) {
+    .actionButton {
+        padding: 8px;
+    }
+
+    .actionButton svg {
+        font-size: 20px;
+    }
+
+    .menuItem {
+        padding: 12px 16px;
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,45 @@
+.userProfile {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.userName {
+    display: none;
+}
+
+.ellipsis {
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@media (min-width: 600px) {
+    .userName {
+        display: block;
+    }
+}
+
+.avatarButton {
+    margin-left: 4px;
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+}
+
+.menuPaper {
+    margin-top: 24px;
+    min-width: 200px;
+}
+
+.menuUserContent {
+    padding: 8px 16px;
+}
+
+.logoutIcon {
+    margin-right: 4px;
+    font-size: 20px;
+}

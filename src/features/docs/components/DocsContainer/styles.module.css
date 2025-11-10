@@ -1,0 +1,17 @@
+.paper {
+    position: relative;
+    padding: calc(2 * var(--mui-spacing));
+    margin-top: var(--mui-spacing);
+    margin-bottom: calc(2 * var(--mui-spacing));
+    border: 1px solid var(--mui-palette-divider);
+    font-family: var(--font-mono);
+    background-color: var(--mui-palette-grey-300);
+    font-size: 14px;
+    overflow: auto;
+}
+
+.pre {
+    margin: 0;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
