@@ -11,6 +11,7 @@ import { ApiKey, CreateApiKeyRequest } from "@/features/api-keys/types/general";
 import { useNotification } from "@/contexts/NotificationContext";
 import { useServices } from "@/contexts/ServicesProvider";
 import { useAuth } from "@/features/auth/contexts/AuthContext";
+import { STORAGE_KEY } from "../services/apiKeyService";
 
 interface ApiKeysContextProps {
     createDialogOpen: boolean;
@@ -147,14 +148,16 @@ export const ApiKeysProvider: FC<PropsWithChildren> = ({ children }) => {
     useEffect(() => {
         loadApiKeys();
 
-        const handleStorageChange = () => {
-            loadApiKeys();
+        const handleStorageChange = (e: StorageEvent) => {
+            if (e.key === STORAGE_KEY) {
+                loadApiKeys();
+            }
         };
 
-        apiKeyService.addStorageListener(handleStorageChange);
+        window.addEventListener("storage", handleStorageChange);
 
         return () => {
-            apiKeyService.removeStorageListener(handleStorageChange);
+            window.removeEventListener("storage", handleStorageChange);
         };
     }, []);
 

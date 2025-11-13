@@ -56,7 +56,9 @@ export const AuthProvider: FC<PropsWithChildren> = ({ children }) => {
 
     const logout = () => {
         try {
-            authService.logout().finally(() => {
+            authService.logout().then(() => {
+                localStorage.clear();
+                setUser(null);
                 router.push("/");
             });
         } catch {

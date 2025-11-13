@@ -1,8 +1,10 @@
+import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-export function proxy(request: NextRequest) {
-    const session = request.cookies.get("session");
+export async function proxy(request: NextRequest) {
+    const cookieStore = await cookies();
+    const session = cookieStore.get("session");
 
     if (!session && request.nextUrl.pathname.startsWith("/dashboard")) {
         return NextResponse.redirect(new URL("/", request.url));

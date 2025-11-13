@@ -32,7 +32,6 @@ export const HeaderUserProfile: FC = () => {
 
     const handleLogout = () => {
         logout();
-        handleMenuClose();
     };
 
     return (
@@ -64,7 +63,6 @@ export const HeaderUserProfile: FC = () => {
                         anchorEl={anchorEl}
                         open={isMenuOpen}
                         onClose={handleMenuClose}
-                        onClick={handleMenuClose}
                         slotProps={{
                             paper: {
                                 elevation: 3,

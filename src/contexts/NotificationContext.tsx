@@ -51,7 +51,6 @@ export const NotificationProvider: FC<PropsWithChildren> = ({ children }) => {
         ({ message, type, error }: NotificationStateWithoutOpen) => {
             if (type === "error") {
                 console.error(error);
-                console.trace();
             }
             setNotification({
                 message,

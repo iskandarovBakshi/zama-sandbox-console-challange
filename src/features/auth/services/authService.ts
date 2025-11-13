@@ -32,11 +32,9 @@ export class AuthService {
         });
     }
 
-    public async logout(): Promise<void> {
-        fetchRequest<LoginLogoutResponse>("/api/logout", {
+    public async logout(): Promise<LoginLogoutResponse> {
+        return fetchRequest<LoginLogoutResponse>("/api/logout", {
             method: "POST",
-        }).finally(() => {
-            localStorage.clear();
         });
     }
 }

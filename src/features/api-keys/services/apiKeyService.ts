@@ -5,7 +5,7 @@ import {
 } from "@/features/api-keys/types/general";
 import { faker } from "@faker-js/faker";
 
-const STORAGE_KEY = "sandbox_api_keys";
+export const STORAGE_KEY = "sandbox_api_keys";
 
 export class ApiKeyService {
     public async getStorageData(): Promise<ApiKey[]> {
@@ -119,25 +119,5 @@ export class ApiKeyService {
     public async getApiKeyById(id: string, userId: string): Promise<ApiKey | null> {
         const keys = await this.getApiKeys(userId);
         return keys.find((key) => key.id === id) || null;
-    }
-
-    public async addStorageListener(callback: () => void): Promise<void> {
-        const handleStorageChange = (e: StorageEvent) => {
-            if (e.key === STORAGE_KEY) {
-                callback();
-            }
-        };
-
-        window.addEventListener("storage", handleStorageChange);
-    }
-
-    public async removeStorageListener(callback: () => void): Promise<void> {
-        const handleStorageChange = (e: StorageEvent) => {
-            if (e.key === STORAGE_KEY) {
-                callback();
-            }
-        };
-
-        window.removeEventListener("storage", handleStorageChange);
     }
 }
